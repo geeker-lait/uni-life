@@ -1,0 +1,13 @@
+image: java:8
+stages:
+  - build
+
+#测试环境
+develop:
+  stage: build
+  script:
+  - pwd
+  tags:
+  - rbac-dev
+  only:
+  - develop
