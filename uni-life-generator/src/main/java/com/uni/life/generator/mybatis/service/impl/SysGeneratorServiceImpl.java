@@ -15,7 +15,6 @@ import java.util.Map;
 import java.util.zip.ZipOutputStream;
 
 /**
- * @Author mall
  */
 @Slf4j
 @Service

@@ -9,19 +9,10 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.uni.service</groupId>
     <artifactId>account-service</artifactId>
     <dependencies>
 
-        <dependency>
-            <groupId>com.uni.project</groupId>
-            <artifactId>crud-framework</artifactId>
-        </dependency>
 
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-        </dependency>
     </dependencies>
 
 </project>

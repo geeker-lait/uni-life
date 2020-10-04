@@ -25,7 +25,7 @@
 
     <dependencies>
 
-        <dependency>
+        <!--<dependency>
             <groupId>com.uni.project</groupId>
             <artifactId>crud-framework</artifactId>
         </dependency>
@@ -57,37 +57,34 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
         </dependency>
-       <!-- <dependency>
+        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-security</artifactId>
-        </dependency>-->
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-cache</artifactId>
         </dependency>
 
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-tx</artifactId>
-        </dependency>
+
 
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
         </dependency>
-        <!-- druid数据源驱动 -->
-        <!--<dependency>
+        &lt;!&ndash; druid数据源驱动 &ndash;&gt;
+        &lt;!&ndash;<dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>druid-spring-boot-starter</artifactId>
             <version>1.1.21</version>
-        </dependency>-->
-        <!--监控sql日志-->
-        <!--<dependency>
+        </dependency>&ndash;&gt;
+        &lt;!&ndash;监控sql日志&ndash;&gt;
+        &lt;!&ndash;<dependency>
             <groupId>org.bgee.log4jdbc-log4j2</groupId>
             <artifactId>log4jdbc-log4j2-jdbc4.1</artifactId>
-        </dependency>-->
+        </dependency>&ndash;&gt;
 
-        <!--spring2.0集成redis所需common-pool2-->
+        &lt;!&ndash;spring2.0集成redis所需common-pool2&ndash;&gt;
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-pool2</artifactId>
@@ -97,7 +94,7 @@
             <artifactId>commons-lang3</artifactId>
         </dependency>
 
-        <!--工具包-->
+        &lt;!&ndash;工具包&ndash;&gt;
         <dependency>
             <groupId>cn.hutool</groupId>
             <artifactId>hutool-all</artifactId>
@@ -114,7 +111,7 @@
             <groupId>org.apache.poi</groupId>
             <artifactId>poi-ooxml</artifactId>
         </dependency>
-        <!--io常用工具类 -->
+        &lt;!&ndash;io常用工具类 &ndash;&gt;
         <dependency>
             <groupId>commons-io</groupId>
             <artifactId>commons-io</artifactId>
@@ -130,20 +127,20 @@
         </dependency>
 
 
-        <!-- https://mvnrepository.com/artifact/com.thoughtworks.xstream/xstream -->
-        <!--<dependency>
+        &lt;!&ndash; https://mvnrepository.com/artifact/com.thoughtworks.xstream/xstream &ndash;&gt;
+        &lt;!&ndash;<dependency>
             <groupId>com.thoughtworks.xstream</groupId>
             <artifactId>xstream</artifactId>
             <version>1.4.12</version>
-        </dependency>-->
+        </dependency>&ndash;&gt;
 
 
-        <!-- fastjson -->
+        &lt;!&ndash; fastjson &ndash;&gt;
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
         </dependency>
-        <!--mapStruct依赖-->
+        &lt;!&ndash;mapStruct依赖&ndash;&gt;
         <dependency>
             <groupId>org.mapstruct</groupId>
             <artifactId>mapstruct-jdk8</artifactId>
@@ -158,7 +155,7 @@
             <artifactId>javax.inject</artifactId>
         </dependency>
 
-        <!--jwt-->
+        &lt;!&ndash;jwt&ndash;&gt;
         <dependency>
             <groupId>io.jsonwebtoken</groupId>
             <artifactId>jjwt-api</artifactId>
@@ -170,7 +167,7 @@
         <dependency>
             <groupId>io.jsonwebtoken</groupId>
             <artifactId>jjwt-jackson</artifactId>
-        </dependency>
+        </dependency>-->
 
         <!--<dependency>
             <groupId>com.github.whvcse</groupId>

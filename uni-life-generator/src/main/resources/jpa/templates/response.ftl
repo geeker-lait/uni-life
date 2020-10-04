@@ -24,9 +24,6 @@ import ${import};
 @Relation(collectionRelation = "resources")
 public class ${className} extends BaseResponseDto {
 
-    /**
-     *
-     */
     private static final long serialVersionUID = -1L;
 
     <#if entity.fields?? && (entity.fields?size > 0)>

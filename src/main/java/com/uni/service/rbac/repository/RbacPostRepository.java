@@ -11,7 +11,7 @@ import com.uni.service.rbac.entity.RbacPost;
  * 这是类的注释
  *
  * @author lait
- * Created On 2020-09-17.
+ * Created On 2020-10-04.
  */
 @RepositoryRestResource(path = "rbacPost", itemResourceRel = "resource", collectionResourceRel = "resources")
 public interface RbacPostRepository extends BaseRepository<RbacPost, Long> {

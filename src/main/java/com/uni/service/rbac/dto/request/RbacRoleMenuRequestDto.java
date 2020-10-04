@@ -10,16 +10,13 @@ import lombok.ToString;
  * 这是类的注释
  *
  * @author lait
- * Created On 2020-09-17.
+ * Created On 2020-10-04.
  */
 @Data
 @ToString(callSuper = true)
 @EqualsAndHashCode(callSuper = false)
 public class RbacRoleMenuRequestDto extends BaseRequestDto {
 
-    /**
-     *
-     */
     private static final long serialVersionUID = -1L;
 
     /**

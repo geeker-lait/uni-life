@@ -12,6 +12,7 @@
     <artifactId>uni-life-starter</artifactId>
 
     <modules>
+        <module>uni-life-auth-starter</module>
         <module>uni-life-crud-starter</module>
         <module>uni-life-redis-starter</module>
     </modules>

@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html  lang="zh">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+    <title>首页</title>
+    <link href="./css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="./css/style.css" rel="stylesheet"/>
+    <link href="./css/login.css" rel="stylesheet"/>
+    <script>
+        // if(window.top!==window.self){window.top.location=window.location};
+    </script>
+</head>
+
+<body class="signin" >
+
+<div class="signinpanel">
+    <div class="row" >
+            <div class="col-sm-5" >
+                <form action="/singOut" method="post">
+                    <div class="m-t-md" style="display: none;" id="11">
+                        <div class="m-t-md">
+                            <h4 class="no-margins">已绑定第三方社交账号,点击解绑：<br>
+                            <a href="#" style="display: none;" id="111" onclick="social('qq')"> <img src="./img/qq.png"></a>
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            <a href="#" style="display: none;" id="112" onclick="social('weixin')"><img src="./img/weixin.png"></a>
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            <a href="#" style="display: none;" id="113" onclick="social('weibo')"><img src="./img/weibo.png"></a></h4 >
+                        </div>
+                    </div>
+                    <div class="m-t-md">
+                        <h4 class="no-margins">退出登录：</h4>
+                        <div class="m-t-md">
+                            <button class="btn btn-success btn-block"  type="submit" data-loading="正在退出登录，请稍后...">退出</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        <div class="col-sm-5" style="display: none;" id="21" >
+
+            <h4 class="no-margins">未绑定第三方社交账号，点击绑定：</h4>
+            <br>
+            <div class="col-sm-5" id="211" style="display: none">
+                <form action="/connect/qq"  method="post">
+                    <button type="submit"  style="background: url('./img/qq.png');width: 30px;height: 30px;"></button>
+                </form>
+            </div>
+            <div class="col-sm-5" id="212" style="display: none">
+                <form >
+                    <button type="submit" onclick=" alert('因微信开发平台开发者认证要300块钱，没钱就没授权，所以虽然代码已开发测试完毕（用别人的账号），却无法上线演示！')" style="background: url('./img/weixin.png');width: 30px;height: 30px;"></button>
+                </form>
+            </div>
+            <div class="col-sm-5" id="213" style="display: none">
+                <form >
+                    <button type="submit" onclick=" alert('因微博开发平台回调地址只可填写一个，域名绑定又不认.club后缀，框架内登陆和绑定回调地址不一样，改源码又不值当，所以微博登陆正常，却无法微博绑定！')" style="background: url('./img/weibo.png');width: 30px;height: 30px;"></button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script src="./js/main.js"></script>
+<script>
+    window.onload = onnnn();
+</script>
+</body>
+</html>

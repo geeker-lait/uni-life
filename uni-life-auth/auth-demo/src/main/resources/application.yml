@@ -1,0 +1,115 @@
+server:
+  port: 80
+  servlet:
+    session:
+      timeout: 3600 # session超时时间为600秒
+spring:
+  session:
+    #session管理方式，可选REDIS
+    store-type: REDIS
+    #mysql
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:60001/farmer?characterEncoding=utf-8&serverTimezone=UTC&useSSL=false
+    username: username
+    password: password
+
+    #redis
+  redis:
+    # Redis数据库索引（默认为0）
+    database: 0
+    host: 127.0.0.1
+    port: 6379
+    password:
+    # 连接超时时间（毫秒）
+    timeout: 0
+    pool:
+      # 连接池最大连接数（使用负值表示没有限制)
+      max-active: 8
+      # 连接池最大阻塞等待时间（使用负值表示没有限制）
+      max-wait: -1
+      # 连接池中的最大空闲连接
+      max-idle: 8
+      # 连接池中的最小空闲连接
+      min-idle: 0
+
+
+
+security:
+  basic:
+    #开启安全校验
+    enabled: true
+  oauth2:
+    client:
+      # 真实项目中应放在数据库里
+      client-id: nrsc
+      client-secret: 123456
+      # 可以在这里简单的指定一个或多个redirect-uri，但真实项目中不会这样做，而是将其放在数据库里
+      # 可以想想为什么资源服务器非要我们指定redirect-uri呢？
+      registered-redirect-uri:
+        - http://www.example.com
+        - http://www.nrsc.com
+
+frame:
+  security:
+    # 通用配置
+    common:
+      #登录页设置
+      loginPage: "/login.html"
+      #退出成功页，默认跳转回登录页
+      logoutPage: "/login.html"
+      #记住我超时时间
+      rememberMeSeconds: 3600
+      #社交登陆后注册绑定页设置
+      signUpUrl: "/signUp.html"
+      #前缀
+      form_prefix: "farmer_"
+    #验证码配置
+    code:
+      #图形验证码相关配置
+      image:
+        width: 90
+        height: 32
+        length: 4
+        #超时时间
+        expireIn: 60
+        #干扰线条数
+        lineCount: 30
+        #验证码类型，纯汉字HAN，纯数字NUMBER，纯英文EN，数字加英文ENANDNUMBER
+        imgCodeType: ENANDNUMBER
+        #需验证请求地址
+        # url :
+      #短信验证码
+      sms:
+        length: 6
+        #超时时间
+        expireIn: 60
+        #需验证请求地址
+        # url :
+
+
+
+    social:
+      #授权请求路径
+      filterProcessesUrl: /auth
+      qq:
+        providerId: "qq"
+        app-id: appid
+        app-secret: appSecret
+
+      weixin:
+        providerId: "weixin"
+        app-id: appid
+        app-secret: appSecret
+
+      weibo:
+        providerId: "weibo"
+        app-id: appid
+        app-secret: appSecret
+#      session :
+#          #同一个用户在系统中的最大session数，默认1
+#          maximumSessions : 1
+#          #达到最大session时是否阻止新的登录请求，默认为false，不阻止，新的登录会将老的登录失效掉
+#          maxSessionsPreventsLogin : false
+#          #session失效时跳转的地址
+#          sessionInvalidUrl :

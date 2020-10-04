@@ -7,8 +7,5 @@ package com.uni.life.crud.dto;
  */
 public abstract class BaseRequestDto extends BaseDto {
 
-    /**
-     *
-     */
     private static final long serialVersionUID = 1L;
 }

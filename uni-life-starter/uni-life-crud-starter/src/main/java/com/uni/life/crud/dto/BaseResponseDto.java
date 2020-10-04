@@ -10,8 +10,5 @@ import org.springframework.hateoas.server.core.Relation;
 @Relation(collectionRelation = "resources")
 public abstract class BaseResponseDto extends BaseDto {
 
-    /**
-     *
-     */
     private static final long serialVersionUID = 1L;
 }

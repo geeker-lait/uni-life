@@ -11,7 +11,7 @@ import com.uni.service.user.entity.UserIdcard;
  * 这是类的注释
  *
  * @author lait
- * Created On 2020-09-17.
+ * Created On 2020-10-04.
  */
 @RepositoryRestResource(path = "userIdcard", itemResourceRel = "resource", collectionResourceRel = "resources")
 public interface UserIdcardRepository extends BaseRepository<UserIdcard, Long> {

@@ -7,7 +7,6 @@ import com.baomidou.mybatisplus.extension.service.IService;
 import org.springframework.stereotype.Service;
 
 /**
- * @Author mall
  */
 @Service
 public interface SysGeneratorService extends IService {

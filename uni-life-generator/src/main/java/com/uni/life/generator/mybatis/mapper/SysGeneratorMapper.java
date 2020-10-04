@@ -10,7 +10,6 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * @Author mall
  */
 @Component
 @Mapper

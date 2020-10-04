@@ -11,7 +11,7 @@ import com.uni.service.rbac.entity.RbacRoleGroup;
  * 这是类的注释
  *
  * @author lait
- * Created On 2020-09-17.
+ * Created On 2020-10-04.
  */
 @RepositoryRestResource(path = "rbacRoleGroup", itemResourceRel = "resource", collectionResourceRel = "resources")
 public interface RbacRoleGroupRepository extends BaseRepository<RbacRoleGroup, Long> {

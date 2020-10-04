@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html  lang="zh">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+    <title>登录</title>
+    <link href="./css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="./css/style.css" rel="stylesheet"/>
+    <link href="./css/login.css" rel="stylesheet"/>
+    <script>
+        // if(window.top!==window.self){window.top.location=window.location};
+    </script>
+</head>
+
+<body class="signin">
+
+<div class="signinpanel">
+    <div class="row" >
+        <div class="col-sm-5" >
+            <form  action="/authentication/form" method="post">
+                <h4 class="no-margins">登录：</h4>
+                <p class="m-t-md">用户名密码登陆</p>
+                <input type="text"     name="username" class="form-control uname"     placeholder="用户名" value="admin"    />
+                <input type="password" name="password" class="form-control pword"     placeholder="密码"   value="123456" />
+                <div class="row m-t">
+                    <div class="col-xs-6">
+                        <input type="text" name="imageCode" class="form-control code" placeholder="验证码" maxlength="4" autocomplete="off">
+                    </div>
+                    <div class="col-xs-6">
+                            <img src="/code/image" width="85%" id="imgCodeRe" onclick="imgCodeRefresh()">
+                    </div>
+                </div>
+                <div class="checkbox-custom">
+                    <input type="checkbox" id="rememberme" name="remember-me"> <label for="rememberme">记住我</label>
+                </div>
+                <button class="btn btn-success btn-block"  type="submit" data-loading="正在验证登录，请稍后...">登录</button>
+            </form>
+        </div>
+        <div class="col-sm-2" ></div>
+        <div class="col-sm-5" >
+            <form  action="/authentication/mobile" method="post">
+                <h4 class="no-margins">登录：</h4>
+                <p class="m-t-md">手机验证码和第三方社交账号登陆</p>
+                <input type="text"   id="mobile"  name="mobile" class="form-control mobile"     placeholder="手机号" value="18888888888"    />
+                <div class="row m-t">
+                    <div class="col-xs-6">
+                        <input type="text" id="smsCode" name="smsCode" class="form-control code" placeholder="手机验证码" maxlength="6" autocomplete="off">
+                    </div>
+                    <div class="col-xs-6">
+                        <button class="btn btn-large btn-primary" id="sendSms" type="button" onclick="sendSmsCode()">发送验证码</button>
+                    </div>
+                </div>
+                <div class="checkbox-custom">
+                    <input type="checkbox" id="rememberme2" name="remember-me"> <label for="rememberme2">记住我</label>
+                </div>
+                <button class="btn btn-success btn-block"  type="submit" data-loading="正在验证登录，请稍后...">登录</button>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <h4 class="no-margins">社交账号登录：
+                 <a href="/auth/qq"> <img src="./img/qq.png"></a>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="#" onclick=" alert('因微信开发平台开发者认证要300块钱，没钱就没授权，所以虽然代码已开发测试完毕（用别人的账号），却无法上线演示！')"><img src="./img/weixin.png"></a>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <a href="/auth/weibo"><img src="./img/weibo.png"></a></h4 >
+            </form>
+        </div>
+
+
+
+    </div>
+
+    <script src="./js/main.js"></script>
+</div>
+</body>
+</html>

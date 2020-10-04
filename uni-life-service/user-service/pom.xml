@@ -9,17 +9,8 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.uni.service</groupId>
     <artifactId>user-service</artifactId>
     <dependencies>
-        <dependency>
-            <groupId>com.uni.project</groupId>
-            <artifactId>crud-framework</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.data</groupId>
-            <artifactId>spring-data-rest-core</artifactId>
-        </dependency>
 
 
     </dependencies>

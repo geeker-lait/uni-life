@@ -24,9 +24,6 @@ import ${import};
 @EqualsAndHashCode(callSuper = false)
 public class ${className} extends BaseEntity {
 
-    /**
-     *
-     */
     private static final long serialVersionUID = -1L;
 
     <#if entity.fields?? && (entity.fields?size > 0)>

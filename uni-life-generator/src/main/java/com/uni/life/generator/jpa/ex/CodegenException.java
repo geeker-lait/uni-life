@@ -5,9 +5,6 @@ package com.uni.life.generator.jpa.ex;
  *
  */
 public class CodegenException extends RuntimeException {
-    /**
-     *
-     */
     private static final long serialVersionUID = 1L;
 
     public CodegenException(String message) {

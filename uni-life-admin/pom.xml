@@ -12,7 +12,7 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.uni.service</groupId>
+            <groupId>com.uni.project</groupId>
             <artifactId>common-service</artifactId>
         </dependency>
 

@@ -3,11 +3,11 @@
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <parent>
+    <!--<parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>2.3.0.RELEASE</version>
-    </parent>
+    </parent>-->
 
     <groupId>com.uni.project</groupId>
     <artifactId>uni-life</artifactId>
@@ -16,17 +16,19 @@
 
     <modules>
         <module>uni-life-admin</module>
+        <module>uni-life-auth</module>
         <module>uni-life-generator</module>
         <module>uni-life-service</module>
         <module>uni-life-merchant</module>
         <module>uni-life-user</module>
         <module>uni-life-starter</module>
 
+
     </modules>
 
     <properties>
         <log4jdbc.version>1.16</log4jdbc.version>
-        <fastjson.version>1.2.54</fastjson.version>
+        <fastjson.version>1.2.62</fastjson.version>
         <hutool.version>5.0.6</hutool.version>
         <mapstruct.version>1.2.0.Final</mapstruct.version>
         <jjwt.version>0.10.6</jjwt.version>
@@ -36,41 +38,66 @@
         <beanmapper.version>3.1.0</beanmapper.version>
     </properties>
 
+
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+    </dependencies>
+
     <dependencyManagement>
         <dependencies>
 
             <dependency>
-                <groupId>com.uni.service</groupId>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>2.3.3.RELEASE</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>Hoxton.SR8</version>
+                <type>pom</type>
+                <scope>runtime</scope>
+            </dependency>
+
+
+            <dependency>
+                <groupId>com.uni.project</groupId>
                 <artifactId>account-service</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.uni.service</groupId>
+                <groupId>com.uni.project</groupId>
                 <artifactId>common-service</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.uni.service</groupId>
+                <groupId>com.uni.project</groupId>
                 <artifactId>member-service</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.uni.service</groupId>
+                <groupId>com.uni.project</groupId>
                 <artifactId>order-service</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.uni.service</groupId>
+                <groupId>com.uni.project</groupId>
                 <artifactId>product-service</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.uni.service</groupId>
+                <groupId>com.uni.project</groupId>
                 <artifactId>statistic-service</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.uni.service</groupId>
+                <groupId>com.uni.project</groupId>
                 <artifactId>user-service</artifactId>
                 <version>${project.version}</version>
             </dependency>
@@ -80,6 +107,29 @@
                 <artifactId>crud-framework</artifactId>
                 <version>${project.version}</version>
             </dependency>
+
+
+            <dependency>
+                <groupId>com.uni.project</groupId>
+                <artifactId>auth-core</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.uni.project</groupId>
+                <artifactId>auth-session</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.uni.project</groupId>
+                <artifactId>auth-web</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.uni.project</groupId>
+                <artifactId>auth-token</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
 
 
             <dependency>
@@ -94,11 +144,11 @@
             </dependency>
 
             <!--工具包-->
-            <dependency>
+            <!--<dependency>
                 <groupId>org.bgee.log4jdbc-log4j2</groupId>
                 <artifactId>log4jdbc-log4j2-jdbc4.1</artifactId>
                 <version>${log4jdbc.version}</version>
-            </dependency>
+            </dependency>-->
             <dependency>
                 <groupId>cn.hutool</groupId>
                 <artifactId>hutool-all</artifactId>
@@ -120,6 +170,24 @@
                 <artifactId>poi-ooxml</artifactId>
                 <version>4.1.2</version>
             </dependency>
+
+            <dependency>
+                <groupId>commons-configuration</groupId>
+                <artifactId>commons-configuration</artifactId>
+                <version>${configuration.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-lang</groupId>
+                <artifactId>commons-lang</artifactId>
+                <version>2.6</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-collections</groupId>
+                <artifactId>commons-collections</artifactId>
+                <version>3.2.2</version>
+            </dependency>
+
+
             <!-- https://mvnrepository.com/artifact/xerces/xercesImpl -->
             <dependency>
                 <groupId>xerces</groupId>
@@ -168,11 +236,7 @@
                 <version>${jjwt.version}</version>
             </dependency>
 
-            <dependency>
-                <groupId>commons-configuration</groupId>
-                <artifactId>commons-configuration</artifactId>
-                <version>${configuration.version}</version>
-            </dependency>
+
 
             <dependency>
                 <groupId>com.github.whvcse</groupId>
@@ -192,10 +256,18 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
-
-
-
-
-
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>

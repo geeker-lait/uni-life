@@ -13,9 +13,6 @@ import java.time.LocalDateTime;
 @Data
 public abstract class BaseDto implements Serializable {
 
-    /**
-     *
-     */
     private static final long serialVersionUID = 1L;
 
     /** 实体ID, 主键 */

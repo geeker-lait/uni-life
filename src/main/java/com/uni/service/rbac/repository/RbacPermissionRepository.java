@@ -11,7 +11,7 @@ import com.uni.service.rbac.entity.RbacPermission;
  * 这是类的注释
  *
  * @author lait
- * Created On 2020-09-17.
+ * Created On 2020-10-04.
  */
 @RepositoryRestResource(path = "rbacPermission", itemResourceRel = "resource", collectionResourceRel = "resources")
 public interface RbacPermissionRepository extends BaseRepository<RbacPermission, Long> {

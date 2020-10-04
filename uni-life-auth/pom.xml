@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>uni-life</artifactId>
+        <groupId>com.uni.project</groupId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>uni-life-auth</artifactId>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>auth-core</module>
+        <module>auth-demo</module>
+        <module>auth-token</module>
+        <module>auth-session</module>
+    </modules>
+
+
+
+
+</project>

@@ -69,9 +69,6 @@ public class RequestSearchUtils {
      */
     public static <T> Specification<T> bySearchFilter(final Collection<SearchFilter> filters) {
         return new Specification<T>() {
-            /**
-             *
-             */
             private static final long serialVersionUID = 7054380594285260439L;
 
             // Root 查询中的条件表达式
